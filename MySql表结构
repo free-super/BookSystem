@@ -1,0 +1,27 @@
+MySql数据库用户密码都是root
+
+create database test;
+
+创建图书信息表
+CREATE TABLE `books` (
+  `b_id` int(11) NOT NULL AUTO_INCREMENT,
+  `b_name` varchar(40) NOT NULL,
+  `b_pages` varchar(10) NOT NULL,
+  `b_money` varchar(10) NOT NULL,
+  `b_date` date DEFAULT NULL,
+  PRIMARY KEY (`b_id`)
+)
+
+
+创建用户表
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) DEFAULT NULL,
+  `passwords` varchar(20) DEFAULT NULL,
+  `gender` varchar(5) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `birthday` date DEFAULT NULL,
+  `deletes` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
